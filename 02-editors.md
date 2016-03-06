@@ -59,7 +59,7 @@ We will also use Jupyter (IPython) notebooks, but this does not remove the need 
 
 What terminal editor will you use? How did you make your decision?
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE
+>> Nano, it is user-friendly.
 
 --
 
@@ -67,6 +67,6 @@ What terminal editor will you use? How did you make your decision?
 
 What graphical editor will you use? How did you make your decision? What are some interesting features of your editor? What are some useful keyboard shortcuts for your editor? How do you customize your editor?
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE
+>> I am currently using Sublime. It is very colorful and organized, very easy to use. My favorite feature or Sublime is the Distraction Free Mode which I can use when I need to focus on my current project. Useful keyboard shortcuts are ⇧⌘L to split the selection into lines and ⌘⇧P to open the Command Palette. I have not customized my editor yet but I can do so by using JSON files.
 
  
