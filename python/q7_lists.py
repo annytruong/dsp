@@ -15,8 +15,13 @@ def match_ends(words):
     >>> match_ends(['aaa', 'be', 'abc', 'hello'])
     1
     """
-    raise NotImplementedError
-
+    count = 0
+    for word in words:
+        if len(word) >= 2 and word[0] == word[-1]:
+            count = count + 1
+    print count
+    #raise NotImplementedError
+match_ends(['aba', 'xyz', 'aa', 'x', 'bbb'])
 
 def front_x(words):
     """
@@ -32,8 +37,16 @@ def front_x(words):
     >>> front_x(['mix', 'xyz', 'apple', 'xanadu', 'aardvark'])
     ['xanadu', 'xyz', 'aardvark', 'apple', 'mix']
     """
-    raise NotImplementedError
-
+    x_words = []
+    other_words = []
+    for word in words:
+        if word[0] == 'x':
+            x_words.append(word)
+        else:
+            other_words.append(word)
+    print sorted(x_words) + sorted(other_words)
+    #raise NotImplementedError
+front_x(['bbb', 'ccc', 'axx', 'xzz', 'xaa'])
 
 def sort_last(tuples):
     """
@@ -49,8 +62,9 @@ def sort_last(tuples):
     >>> sort_last([(1, 7), (1, 3), (3, 4, 5), (2, 2)])
     [(2, 2), (1, 3), (3, 4, 5), (1, 7)]
     """
-    raise NotImplementedError
-
+    print sorted(tuples, key=lambda x: x[-1])
+    #raise NotImplementedError
+sort_last([(1, 3), (3, 2), (2, 1)])
 
 def remove_adjacent(nums):
     """
@@ -68,8 +82,13 @@ def remove_adjacent(nums):
     >>> remove_adjacent([])
     []
     """
-    raise NotImplementedError
-
+    result = []
+    for i in nums:
+        if len(result) == 0 or i != result[-1]:
+            result.append(i)
+    print result
+    #raise NotImplementedError
+remove_adjacent([3, 2, 3, 3, 3])
 
 def linear_merge(list1, list2):
     """
@@ -85,4 +104,12 @@ def linear_merge(list1, list2):
     >>> linear_merge(['aa', 'aa'], ['aa', 'bb', 'bb'])
     ['aa', 'aa', 'aa', 'bb', 'bb']
     """
-    raise NotImplementedError
+    if len(list1) > len(list2):
+        list1.extend(list2)
+        print sorted(list1)
+    else:
+        list2.extend(list1)
+        print sorted(list2)
+    #raise NotImplementedError
+linear_merge(['aa', 'aa'], ['aa', 'bb', 'bb'])
+linear_merge(['aa', 'xx'], ['bb', 'cc', 'zz'])
