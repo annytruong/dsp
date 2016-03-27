@@ -9,11 +9,29 @@
 
 import csv
 
-  def read_data(data):
+def read_data(data):
+	with open(data, 'r') as a:
+		football = [row for row in csv.reader(a.read().splitlines())]
+	return football
    # COMPLETE THIS FUNCTION
 
-  def get_min_score_difference(self, parsed_data):
+def get_min_score_difference(football):
+	football.pop(0)
+	goals = [row[5] for row in football]
+	goals_allowed = [row[6] for row in football]
+	values = [abs(float(x) - float(y)) for x, y in zip(goals, goals_allowed)]
+	return values.index(min(values))
+	# COMPLETE THIS FUNCTION
+
+def get_team(index_value, football):
+	teams = [row[0] for row in football]
+	return teams[index_value]
     # COMPLETE THIS FUNCTION
 
-  def get_team(self, index_value, parsed_data):
-    # COMPLETE THIS FUNCTION
+data = read_data("football.csv")
+min_score = get_min_score_difference(data)
+team = get_team(min_score, data)
+
+print data
+print min_score
+print team
