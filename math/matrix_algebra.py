@@ -27,22 +27,18 @@ print '2.4) ', np.dot(u,v)
 print '2.5) ', np.linalg.norm(u)
 
 # Part III: Matrix Operations
+"""def matrix(math):
+	try: math
+	except ValueError: print "Not Defined"
+	print math""" #this code doesn't work for errors
 
 print '3.1) ',
 try: a + c
 except ValueError: print 'Not Defined'
 
-print '3.2) ', 
-try: a - c.T
-except ValueError: print 'Not Defined'
-
-print '3.3) ', 
-try: c.T + 3*d
-except ValueError: print 'Not Defined'
-
-print '3.4) ', 
-try: b*a
-except ValueError: print 'Not Defined'
+print '3.2) ', a - c.T
+print '3.3) ', c.T + 3*d
+print '3.4) ', b*a
 
 print '3.5) ', 
 try: b*a.T
